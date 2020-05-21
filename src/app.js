@@ -16,6 +16,10 @@ const app = express()
 const log = console.log
 //
 
+//port
+
+const port = process.env.PORT || 3000
+
 // all paths
 const publicDirectoryPath = path.join(__dirname, '../public')
 const viewDirectoryPath = path.join(__dirname, '../templates/views')
@@ -103,6 +107,6 @@ app.get('*', (req, res) => {
     })
 })
 
-app.listen(3000, () => {
-    console.log("server is running on port 3000")
+app.listen(port, () => {
+    console.log(`server is running on port ${port}`)
 })
