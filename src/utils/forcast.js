@@ -1,6 +1,6 @@
 const request = require('request')
 
-const key = ""
+const key = "" // add your key here
 
 const forcast = (latitude , longitude, callback) => {
     const url = `http://api.weatherapi.com/v1/forecast.json?key=${key}&q=${encodeURIComponent(latitude, longitude)}&days=1`
